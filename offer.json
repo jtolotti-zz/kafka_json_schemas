@@ -1,0 +1,1418 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://minted.com/mirakl/offer.json",
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "examples": [
+        {
+            "products": [
+                {
+                    "category_code": "cat-5",
+                    "category_label": "Original Wall Art",
+                    "offers": [
+                        {
+                            "active": true,
+                            "all_prices": [
+                                {
+                                    "channel_code": null,
+                                    "discount_end_date": null,
+                                    "discount_start_date": null,
+                                    "price": 500.0,
+                                    "unit_discount_price": null,
+                                    "unit_origin_price": 501.0,
+                                    "volume_prices": [
+                                        {
+                                            "price": 500.0,
+                                            "quantity_threshold": 1,
+                                            "unit_discount_price": null,
+                                            "unit_origin_price": 500.0
+                                        }
+                                    ]
+                                }
+                            ],
+                            "allow_quote_requests": false,
+                            "applicable_pricing": {
+                                "channel_code": null,
+                                "discount_end_date": null,
+                                "discount_start_date": null,
+                                "price": 500.0,
+                                "unit_discount_price": null,
+                                "unit_origin_price": 500.0,
+                                "volume_prices": [
+                                    {
+                                        "price": 500.0,
+                                        "quantity_threshold": 1,
+                                        "unit_discount_price": null,
+                                        "unit_origin_price": 500.0
+                                    }
+                                ]
+                            },
+                            "channels": [
+                                "INIT"
+                            ],
+                            "currency_iso_code": "USD",
+                            "description": null,
+                            "discount": null,
+                            "fulfillment": {
+                                "center": {
+                                    "code": "DEFAULT"
+                                }
+                            },
+                            "inactivity_reasons": [],
+                            "is_professional": true,
+                            "logistic_class": {
+                                "code": "m",
+                                "label": "Medium"
+                            },
+                            "min_quantity_alert": null,
+                            "min_shipping_price": 7.0,
+                            "min_shipping_price_additional": 2.0,
+                            "min_shipping_type": "STD",
+                            "min_shipping_zone": "us",
+                            "nb_evaluation": 0,
+                            "offer_additional_fields": [],
+                            "offer_id": 2000,
+                            "premium": false,
+                            "price": 500.0,
+                            "price_additional_info": null,
+                            "quantity": 1,
+                            "shop_grade": null,
+                            "shop_id": 2000,
+                            "shop_name": "DJ's Art",
+                            "state_code": "1",
+                            "total_price": 507.0
+                        }
+                    ],
+                    "product_brand": "Project 62",
+                    "product_description": "Refresh any blank wall in your home in artistic style with this Abstract Wall Art from Project 62?. The framed canvas with brushed gel wall art features an abstract pattern ",
+                    "product_media": {
+                        "media_url": "https://media-dev-eu-2.mirakl.net/MEDIA/71cc9baac3d1493ab81a468a114f444f",
+                        "type": "LARGE"
+                    },
+                    "product_references": [],
+                    "product_sku": "OperatorSku2",
+                    "product_title": "Abstract Mountain Framed Canvas",
+                    "total_count": 1
+                }
+            ]
+        }
+    ],
+    "required": [
+        "products"
+    ],
+    "properties": {
+        "products": {
+            "$id": "#/properties/products",
+            "type": "array",
+            "title": "The products schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "examples": [
+                [
+                    {
+                        "category_code": "cat-5",
+                        "category_label": "Original Wall Art",
+                        "offers": [
+                            {
+                                "active": true,
+                                "all_prices": [
+                                    {
+                                        "channel_code": null,
+                                        "discount_end_date": null,
+                                        "discount_start_date": null,
+                                        "price": 500.0,
+                                        "unit_discount_price": null,
+                                        "unit_origin_price": 501.0,
+                                        "volume_prices": [
+                                            {
+                                                "price": 500.0,
+                                                "quantity_threshold": 1,
+                                                "unit_discount_price": null,
+                                                "unit_origin_price": 500.0
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "allow_quote_requests": false,
+                                "applicable_pricing": {
+                                    "channel_code": null,
+                                    "discount_end_date": null,
+                                    "discount_start_date": null,
+                                    "price": 500.0,
+                                    "unit_discount_price": null,
+                                    "unit_origin_price": 500.0,
+                                    "volume_prices": [
+                                        {
+                                            "price": 500.0,
+                                            "quantity_threshold": 1,
+                                            "unit_discount_price": null,
+                                            "unit_origin_price": 500.0
+                                        }
+                                    ]
+                                },
+                                "channels": [
+                                    "INIT"
+                                ],
+                                "currency_iso_code": "USD",
+                                "description": null,
+                                "discount": null,
+                                "fulfillment": {
+                                    "center": {
+                                        "code": "DEFAULT"
+                                    }
+                                },
+                                "inactivity_reasons": [],
+                                "is_professional": true,
+                                "logistic_class": {
+                                    "code": "m",
+                                    "label": "Medium"
+                                },
+                                "min_quantity_alert": null,
+                                "min_shipping_price": 7.0,
+                                "min_shipping_price_additional": 2.0,
+                                "min_shipping_type": "STD",
+                                "min_shipping_zone": "us",
+                                "nb_evaluation": 0,
+                                "offer_additional_fields": [],
+                                "offer_id": 2000,
+                                "premium": false,
+                                "price": 500.0,
+                                "price_additional_info": null,
+                                "quantity": 1,
+                                "shop_grade": null,
+                                "shop_id": 2000,
+                                "shop_name": "DJ's Art",
+                                "state_code": "1",
+                                "total_price": 507.0
+                            }
+                        ],
+                        "product_brand": "Project 62",
+                        "product_description": "Refresh any blank wall in your home in artistic style with this Abstract Wall Art from Project 62?. The framed canvas with brushed gel wall art features an abstract pattern ",
+                        "product_media": {
+                            "media_url": "https://media-dev-eu-2.mirakl.net/MEDIA/71cc9baac3d1493ab81a468a114f444f",
+                            "type": "LARGE"
+                        },
+                        "product_references": [],
+                        "product_sku": "OperatorSku2",
+                        "product_title": "Abstract Mountain Framed Canvas",
+                        "total_count": 1
+                    }
+                ]
+            ],
+            "additionalItems": true,
+            "items": {
+                "$id": "#/properties/products/items",
+                "anyOf": [
+                    {
+                        "$id": "#/properties/products/items/anyOf/0",
+                        "type": "object",
+                        "title": "The first anyOf schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": {},
+                        "examples": [
+                            {
+                                "category_code": "cat-5",
+                                "category_label": "Original Wall Art",
+                                "offers": [
+                                    {
+                                        "active": true,
+                                        "all_prices": [
+                                            {
+                                                "channel_code": null,
+                                                "discount_end_date": null,
+                                                "discount_start_date": null,
+                                                "price": 500.0,
+                                                "unit_discount_price": null,
+                                                "unit_origin_price": 501.0,
+                                                "volume_prices": [
+                                                    {
+                                                        "price": 500.0,
+                                                        "quantity_threshold": 1,
+                                                        "unit_discount_price": null,
+                                                        "unit_origin_price": 500.0
+                                                    }
+                                                ]
+                                            }
+                                        ],
+                                        "allow_quote_requests": false,
+                                        "applicable_pricing": {
+                                            "channel_code": null,
+                                            "discount_end_date": null,
+                                            "discount_start_date": null,
+                                            "price": 500.0,
+                                            "unit_discount_price": null,
+                                            "unit_origin_price": 500.0,
+                                            "volume_prices": [
+                                                {
+                                                    "price": 500.0,
+                                                    "quantity_threshold": 1,
+                                                    "unit_discount_price": null,
+                                                    "unit_origin_price": 500.0
+                                                }
+                                            ]
+                                        },
+                                        "channels": [
+                                            "INIT"
+                                        ],
+                                        "currency_iso_code": "USD",
+                                        "description": null,
+                                        "discount": null,
+                                        "fulfillment": {
+                                            "center": {
+                                                "code": "DEFAULT"
+                                            }
+                                        },
+                                        "inactivity_reasons": [],
+                                        "is_professional": true,
+                                        "logistic_class": {
+                                            "code": "m",
+                                            "label": "Medium"
+                                        },
+                                        "min_quantity_alert": null,
+                                        "min_shipping_price": 7.0,
+                                        "min_shipping_price_additional": 2.0,
+                                        "min_shipping_type": "STD",
+                                        "min_shipping_zone": "us",
+                                        "nb_evaluation": 0,
+                                        "offer_additional_fields": [],
+                                        "offer_id": 2000,
+                                        "premium": false,
+                                        "price": 500.0,
+                                        "price_additional_info": null,
+                                        "quantity": 1,
+                                        "shop_grade": null,
+                                        "shop_id": 2000,
+                                        "shop_name": "DJ's Art",
+                                        "state_code": "1",
+                                        "total_price": 507.0
+                                    }
+                                ],
+                                "product_brand": "Project 62",
+                                "product_description": "Refresh any blank wall in your home in artistic style with this Abstract Wall Art from Project 62?. The framed canvas with brushed gel wall art features an abstract pattern ",
+                                "product_media": {
+                                    "media_url": "https://media-dev-eu-2.mirakl.net/MEDIA/71cc9baac3d1493ab81a468a114f444f",
+                                    "type": "LARGE"
+                                },
+                                "product_references": [],
+                                "product_sku": "OperatorSku2",
+                                "product_title": "Abstract Mountain Framed Canvas",
+                                "total_count": 1
+                            }
+                        ],
+                        "required": [
+                            "category_code",
+                            "category_label",
+                            "offers",
+                            "product_brand",
+                            "product_description",
+                            "product_media",
+                            "product_references",
+                            "product_sku",
+                            "product_title",
+                            "total_count"
+                        ],
+                        "properties": {
+                            "category_code": {
+                                "$id": "#/properties/products/items/anyOf/0/properties/category_code",
+                                "type": "string",
+                                "title": "The category_code schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "cat-5"
+                                ]
+                            },
+                            "category_label": {
+                                "$id": "#/properties/products/items/anyOf/0/properties/category_label",
+                                "type": "string",
+                                "title": "The category_label schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "Original Wall Art"
+                                ]
+                            },
+                            "offers": {
+                                "$id": "#/properties/products/items/anyOf/0/properties/offers",
+                                "type": "array",
+                                "title": "The offers schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": [],
+                                "examples": [
+                                    [
+                                        {
+                                            "active": true,
+                                            "all_prices": [
+                                                {
+                                                    "channel_code": null,
+                                                    "discount_end_date": null,
+                                                    "discount_start_date": null,
+                                                    "price": 500.0,
+                                                    "unit_discount_price": null,
+                                                    "unit_origin_price": 501.0,
+                                                    "volume_prices": [
+                                                        {
+                                                            "price": 500.0,
+                                                            "quantity_threshold": 1,
+                                                            "unit_discount_price": null,
+                                                            "unit_origin_price": 500.0
+                                                        }
+                                                    ]
+                                                }
+                                            ],
+                                            "allow_quote_requests": false,
+                                            "applicable_pricing": {
+                                                "channel_code": null,
+                                                "discount_end_date": null,
+                                                "discount_start_date": null,
+                                                "price": 500.0,
+                                                "unit_discount_price": null,
+                                                "unit_origin_price": 500.0,
+                                                "volume_prices": [
+                                                    {
+                                                        "price": 500.0,
+                                                        "quantity_threshold": 1,
+                                                        "unit_discount_price": null,
+                                                        "unit_origin_price": 500.0
+                                                    }
+                                                ]
+                                            },
+                                            "channels": [
+                                                "INIT"
+                                            ],
+                                            "currency_iso_code": "USD",
+                                            "description": null,
+                                            "discount": null,
+                                            "fulfillment": {
+                                                "center": {
+                                                    "code": "DEFAULT"
+                                                }
+                                            },
+                                            "inactivity_reasons": [],
+                                            "is_professional": true,
+                                            "logistic_class": {
+                                                "code": "m",
+                                                "label": "Medium"
+                                            },
+                                            "min_quantity_alert": null,
+                                            "min_shipping_price": 7.0,
+                                            "min_shipping_price_additional": 2.0,
+                                            "min_shipping_type": "STD",
+                                            "min_shipping_zone": "us",
+                                            "nb_evaluation": 0,
+                                            "offer_additional_fields": [],
+                                            "offer_id": 2000,
+                                            "premium": false,
+                                            "price": 500.0,
+                                            "price_additional_info": null,
+                                            "quantity": 1,
+                                            "shop_grade": null,
+                                            "shop_id": 2000,
+                                            "shop_name": "DJ's Art",
+                                            "state_code": "1",
+                                            "total_price": 507.0
+                                        }
+                                    ]
+                                ],
+                                "additionalItems": true,
+                                "items": {
+                                    "$id": "#/properties/products/items/anyOf/0/properties/offers/items",
+                                    "anyOf": [
+                                        {
+                                            "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0",
+                                            "type": "object",
+                                            "title": "The first anyOf schema",
+                                            "description": "An explanation about the purpose of this instance.",
+                                            "default": {},
+                                            "examples": [
+                                                {
+                                                    "active": true,
+                                                    "all_prices": [
+                                                        {
+                                                            "channel_code": null,
+                                                            "discount_end_date": null,
+                                                            "discount_start_date": null,
+                                                            "price": 500.0,
+                                                            "unit_discount_price": null,
+                                                            "unit_origin_price": 501.0,
+                                                            "volume_prices": [
+                                                                {
+                                                                    "price": 500.0,
+                                                                    "quantity_threshold": 1,
+                                                                    "unit_discount_price": null,
+                                                                    "unit_origin_price": 500.0
+                                                                }
+                                                            ]
+                                                        }
+                                                    ],
+                                                    "allow_quote_requests": false,
+                                                    "applicable_pricing": {
+                                                        "channel_code": null,
+                                                        "discount_end_date": null,
+                                                        "discount_start_date": null,
+                                                        "price": 500.0,
+                                                        "unit_discount_price": null,
+                                                        "unit_origin_price": 500.0,
+                                                        "volume_prices": [
+                                                            {
+                                                                "price": 500.0,
+                                                                "quantity_threshold": 1,
+                                                                "unit_discount_price": null,
+                                                                "unit_origin_price": 500.0
+                                                            }
+                                                        ]
+                                                    },
+                                                    "channels": [
+                                                        "INIT"
+                                                    ],
+                                                    "currency_iso_code": "USD",
+                                                    "description": null,
+                                                    "discount": null,
+                                                    "fulfillment": {
+                                                        "center": {
+                                                            "code": "DEFAULT"
+                                                        }
+                                                    },
+                                                    "inactivity_reasons": [],
+                                                    "is_professional": true,
+                                                    "logistic_class": {
+                                                        "code": "m",
+                                                        "label": "Medium"
+                                                    },
+                                                    "min_quantity_alert": null,
+                                                    "min_shipping_price": 7.0,
+                                                    "min_shipping_price_additional": 2.0,
+                                                    "min_shipping_type": "STD",
+                                                    "min_shipping_zone": "us",
+                                                    "nb_evaluation": 0,
+                                                    "offer_additional_fields": [],
+                                                    "offer_id": 2000,
+                                                    "premium": false,
+                                                    "price": 500.0,
+                                                    "price_additional_info": null,
+                                                    "quantity": 1,
+                                                    "shop_grade": null,
+                                                    "shop_id": 2000,
+                                                    "shop_name": "DJ's Art",
+                                                    "state_code": "1",
+                                                    "total_price": 507.0
+                                                }
+                                            ],
+                                            "required": [
+                                                "active",
+                                                "all_prices",
+                                                "allow_quote_requests",
+                                                "applicable_pricing",
+                                                "channels",
+                                                "currency_iso_code",
+                                                "description",
+                                                "discount",
+                                                "fulfillment",
+                                                "inactivity_reasons",
+                                                "is_professional",
+                                                "logistic_class",
+                                                "min_quantity_alert",
+                                                "min_shipping_price",
+                                                "min_shipping_price_additional",
+                                                "min_shipping_type",
+                                                "min_shipping_zone",
+                                                "nb_evaluation",
+                                                "offer_additional_fields",
+                                                "offer_id",
+                                                "premium",
+                                                "price",
+                                                "price_additional_info",
+                                                "quantity",
+                                                "shop_grade",
+                                                "shop_id",
+                                                "shop_name",
+                                                "state_code",
+                                                "total_price"
+                                            ],
+                                            "properties": {
+                                                "active": {
+                                                    "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/active",
+                                                    "type": "boolean",
+                                                    "title": "The active schema",
+                                                    "description": "An explanation about the purpose of this instance.",
+                                                    "default": false,
+                                                    "examples": [
+                                                        true
+                                                    ]
+                                                },
+                                                "all_prices": {
+                                                    "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/all_prices",
+                                                    "type": "array",
+                                                    "title": "The all_prices schema",
+                                                    "description": "An explanation about the purpose of this instance.",
+                                                    "default": [],
+                                                    "examples": [
+                                                        [
+                                                            {
+                                                                "channel_code": null,
+                                                                "discount_end_date": null,
+                                                                "discount_start_date": null,
+                                                                "price": 500.0,
+                                                                "unit_discount_price": null,
+                                                                "unit_origin_price": 501.0,
+                                                                "volume_prices": [
+                                                                    {
+                                                                        "price": 500.0,
+                                                                        "quantity_threshold": 1,
+                                                                        "unit_discount_price": null,
+                                                                        "unit_origin_price": 500.0
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    ],
+                                                    "additionalItems": true,
+                                                    "items": {
+                                                        "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/all_prices/items",
+                                                        "anyOf": [
+                                                            {
+                                                                "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/all_prices/items/anyOf/0",
+                                                                "type": "object",
+                                                                "title": "The first anyOf schema",
+                                                                "description": "An explanation about the purpose of this instance.",
+                                                                "default": {},
+                                                                "examples": [
+                                                                    {
+                                                                        "channel_code": null,
+                                                                        "discount_end_date": null,
+                                                                        "discount_start_date": null,
+                                                                        "price": 500.0,
+                                                                        "unit_discount_price": null,
+                                                                        "unit_origin_price": 501.0,
+                                                                        "volume_prices": [
+                                                                            {
+                                                                                "price": 500.0,
+                                                                                "quantity_threshold": 1,
+                                                                                "unit_discount_price": null,
+                                                                                "unit_origin_price": 500.0
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ],
+                                                                "required": [
+                                                                    "channel_code",
+                                                                    "discount_end_date",
+                                                                    "discount_start_date",
+                                                                    "price",
+                                                                    "unit_discount_price",
+                                                                    "unit_origin_price",
+                                                                    "volume_prices"
+                                                                ],
+                                                                "properties": {
+                                                                    "channel_code": {
+                                                                        "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/all_prices/items/anyOf/0/properties/channel_code",
+                                                                        "type": "null",
+                                                                        "title": "The channel_code schema",
+                                                                        "description": "An explanation about the purpose of this instance.",
+                                                                        "default": null,
+                                                                        "examples": [
+                                                                            null
+                                                                        ]
+                                                                    },
+                                                                    "discount_end_date": {
+                                                                        "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/all_prices/items/anyOf/0/properties/discount_end_date",
+                                                                        "type": "null",
+                                                                        "title": "The discount_end_date schema",
+                                                                        "description": "An explanation about the purpose of this instance.",
+                                                                        "default": null,
+                                                                        "examples": [
+                                                                            null
+                                                                        ]
+                                                                    },
+                                                                    "discount_start_date": {
+                                                                        "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/all_prices/items/anyOf/0/properties/discount_start_date",
+                                                                        "type": "null",
+                                                                        "title": "The discount_start_date schema",
+                                                                        "description": "An explanation about the purpose of this instance.",
+                                                                        "default": null,
+                                                                        "examples": [
+                                                                            null
+                                                                        ]
+                                                                    },
+                                                                    "price": {
+                                                                        "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/all_prices/items/anyOf/0/properties/price",
+                                                                        "type": "number",
+                                                                        "title": "The price schema",
+                                                                        "description": "An explanation about the purpose of this instance.",
+                                                                        "default": 0.0,
+                                                                        "examples": [
+                                                                            500.0
+                                                                        ]
+                                                                    },
+                                                                    "unit_discount_price": {
+                                                                        "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/all_prices/items/anyOf/0/properties/unit_discount_price",
+                                                                        "type": "null",
+                                                                        "title": "The unit_discount_price schema",
+                                                                        "description": "An explanation about the purpose of this instance.",
+                                                                        "default": null,
+                                                                        "examples": [
+                                                                            null
+                                                                        ]
+                                                                    },
+                                                                    "unit_origin_price": {
+                                                                        "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/all_prices/items/anyOf/0/properties/unit_origin_price",
+                                                                        "type": "number",
+                                                                        "title": "The unit_origin_price schema",
+                                                                        "description": "An explanation about the purpose of this instance.",
+                                                                        "default": 0.0,
+                                                                        "examples": [
+                                                                            501.0
+                                                                        ]
+                                                                    },
+                                                                    "volume_prices": {
+                                                                        "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/all_prices/items/anyOf/0/properties/volume_prices",
+                                                                        "type": "array",
+                                                                        "title": "The volume_prices schema",
+                                                                        "description": "An explanation about the purpose of this instance.",
+                                                                        "default": [],
+                                                                        "examples": [
+                                                                            [
+                                                                                {
+                                                                                    "price": 500.0,
+                                                                                    "quantity_threshold": 1,
+                                                                                    "unit_discount_price": null,
+                                                                                    "unit_origin_price": 500.0
+                                                                                }
+                                                                            ]
+                                                                        ],
+                                                                        "additionalItems": true,
+                                                                        "items": {
+                                                                            "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/all_prices/items/anyOf/0/properties/volume_prices/items",
+                                                                            "anyOf": [
+                                                                                {
+                                                                                    "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/all_prices/items/anyOf/0/properties/volume_prices/items/anyOf/0",
+                                                                                    "type": "object",
+                                                                                    "title": "The first anyOf schema",
+                                                                                    "description": "An explanation about the purpose of this instance.",
+                                                                                    "default": {},
+                                                                                    "examples": [
+                                                                                        {
+                                                                                            "price": 500.0,
+                                                                                            "quantity_threshold": 1,
+                                                                                            "unit_discount_price": null,
+                                                                                            "unit_origin_price": 500.0
+                                                                                        }
+                                                                                    ],
+                                                                                    "required": [
+                                                                                        "price",
+                                                                                        "quantity_threshold",
+                                                                                        "unit_discount_price",
+                                                                                        "unit_origin_price"
+                                                                                    ],
+                                                                                    "properties": {
+                                                                                        "price": {
+                                                                                            "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/all_prices/items/anyOf/0/properties/volume_prices/items/anyOf/0/properties/price",
+                                                                                            "type": "number",
+                                                                                            "title": "The price schema",
+                                                                                            "description": "An explanation about the purpose of this instance.",
+                                                                                            "default": 0.0,
+                                                                                            "examples": [
+                                                                                                500.0
+                                                                                            ]
+                                                                                        },
+                                                                                        "quantity_threshold": {
+                                                                                            "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/all_prices/items/anyOf/0/properties/volume_prices/items/anyOf/0/properties/quantity_threshold",
+                                                                                            "type": "integer",
+                                                                                            "title": "The quantity_threshold schema",
+                                                                                            "description": "An explanation about the purpose of this instance.",
+                                                                                            "default": 0,
+                                                                                            "examples": [
+                                                                                                1
+                                                                                            ]
+                                                                                        },
+                                                                                        "unit_discount_price": {
+                                                                                            "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/all_prices/items/anyOf/0/properties/volume_prices/items/anyOf/0/properties/unit_discount_price",
+                                                                                            "type": "null",
+                                                                                            "title": "The unit_discount_price schema",
+                                                                                            "description": "An explanation about the purpose of this instance.",
+                                                                                            "default": null,
+                                                                                            "examples": [
+                                                                                                null
+                                                                                            ]
+                                                                                        },
+                                                                                        "unit_origin_price": {
+                                                                                            "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/all_prices/items/anyOf/0/properties/volume_prices/items/anyOf/0/properties/unit_origin_price",
+                                                                                            "type": "number",
+                                                                                            "title": "The unit_origin_price schema",
+                                                                                            "description": "An explanation about the purpose of this instance.",
+                                                                                            "default": 0.0,
+                                                                                            "examples": [
+                                                                                                500.0
+                                                                                            ]
+                                                                                        }
+                                                                                    },
+                                                                                    "additionalProperties": true
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    }
+                                                                },
+                                                                "additionalProperties": true
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                "allow_quote_requests": {
+                                                    "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/allow_quote_requests",
+                                                    "type": "boolean",
+                                                    "title": "The allow_quote_requests schema",
+                                                    "description": "An explanation about the purpose of this instance.",
+                                                    "default": false,
+                                                    "examples": [
+                                                        false
+                                                    ]
+                                                },
+                                                "applicable_pricing": {
+                                                    "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/applicable_pricing",
+                                                    "type": "object",
+                                                    "title": "The applicable_pricing schema",
+                                                    "description": "An explanation about the purpose of this instance.",
+                                                    "default": {},
+                                                    "examples": [
+                                                        {
+                                                            "channel_code": null,
+                                                            "discount_end_date": null,
+                                                            "discount_start_date": null,
+                                                            "price": 500.0,
+                                                            "unit_discount_price": null,
+                                                            "unit_origin_price": 500.0,
+                                                            "volume_prices": [
+                                                                {
+                                                                    "price": 500.0,
+                                                                    "quantity_threshold": 1,
+                                                                    "unit_discount_price": null,
+                                                                    "unit_origin_price": 500.0
+                                                                }
+                                                            ]
+                                                        }
+                                                    ],
+                                                    "required": [
+                                                        "channel_code",
+                                                        "discount_end_date",
+                                                        "discount_start_date",
+                                                        "price",
+                                                        "unit_discount_price",
+                                                        "unit_origin_price",
+                                                        "volume_prices"
+                                                    ],
+                                                    "properties": {
+                                                        "channel_code": {
+                                                            "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/applicable_pricing/properties/channel_code",
+                                                            "type": "null",
+                                                            "title": "The channel_code schema",
+                                                            "description": "An explanation about the purpose of this instance.",
+                                                            "default": null,
+                                                            "examples": [
+                                                                null
+                                                            ]
+                                                        },
+                                                        "discount_end_date": {
+                                                            "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/applicable_pricing/properties/discount_end_date",
+                                                            "type": "null",
+                                                            "title": "The discount_end_date schema",
+                                                            "description": "An explanation about the purpose of this instance.",
+                                                            "default": null,
+                                                            "examples": [
+                                                                null
+                                                            ]
+                                                        },
+                                                        "discount_start_date": {
+                                                            "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/applicable_pricing/properties/discount_start_date",
+                                                            "type": "null",
+                                                            "title": "The discount_start_date schema",
+                                                            "description": "An explanation about the purpose of this instance.",
+                                                            "default": null,
+                                                            "examples": [
+                                                                null
+                                                            ]
+                                                        },
+                                                        "price": {
+                                                            "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/applicable_pricing/properties/price",
+                                                            "type": "number",
+                                                            "title": "The price schema",
+                                                            "description": "An explanation about the purpose of this instance.",
+                                                            "default": 0.0,
+                                                            "examples": [
+                                                                500.0
+                                                            ]
+                                                        },
+                                                        "unit_discount_price": {
+                                                            "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/applicable_pricing/properties/unit_discount_price",
+                                                            "type": "null",
+                                                            "title": "The unit_discount_price schema",
+                                                            "description": "An explanation about the purpose of this instance.",
+                                                            "default": null,
+                                                            "examples": [
+                                                                null
+                                                            ]
+                                                        },
+                                                        "unit_origin_price": {
+                                                            "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/applicable_pricing/properties/unit_origin_price",
+                                                            "type": "number",
+                                                            "title": "The unit_origin_price schema",
+                                                            "description": "An explanation about the purpose of this instance.",
+                                                            "default": 0.0,
+                                                            "examples": [
+                                                                500.0
+                                                            ]
+                                                        },
+                                                        "volume_prices": {
+                                                            "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/applicable_pricing/properties/volume_prices",
+                                                            "type": "array",
+                                                            "title": "The volume_prices schema",
+                                                            "description": "An explanation about the purpose of this instance.",
+                                                            "default": [],
+                                                            "examples": [
+                                                                [
+                                                                    {
+                                                                        "price": 500.0,
+                                                                        "quantity_threshold": 1,
+                                                                        "unit_discount_price": null,
+                                                                        "unit_origin_price": 500.0
+                                                                    }
+                                                                ]
+                                                            ],
+                                                            "additionalItems": true,
+                                                            "items": {
+                                                                "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/applicable_pricing/properties/volume_prices/items",
+                                                                "anyOf": [
+                                                                    {
+                                                                        "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/applicable_pricing/properties/volume_prices/items/anyOf/0",
+                                                                        "type": "object",
+                                                                        "title": "The first anyOf schema",
+                                                                        "description": "An explanation about the purpose of this instance.",
+                                                                        "default": {},
+                                                                        "examples": [
+                                                                            {
+                                                                                "price": 500.0,
+                                                                                "quantity_threshold": 1,
+                                                                                "unit_discount_price": null,
+                                                                                "unit_origin_price": 500.0
+                                                                            }
+                                                                        ],
+                                                                        "required": [
+                                                                            "price",
+                                                                            "quantity_threshold",
+                                                                            "unit_discount_price",
+                                                                            "unit_origin_price"
+                                                                        ],
+                                                                        "properties": {
+                                                                            "price": {
+                                                                                "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/applicable_pricing/properties/volume_prices/items/anyOf/0/properties/price",
+                                                                                "type": "number",
+                                                                                "title": "The price schema",
+                                                                                "description": "An explanation about the purpose of this instance.",
+                                                                                "default": 0.0,
+                                                                                "examples": [
+                                                                                    500.0
+                                                                                ]
+                                                                            },
+                                                                            "quantity_threshold": {
+                                                                                "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/applicable_pricing/properties/volume_prices/items/anyOf/0/properties/quantity_threshold",
+                                                                                "type": "integer",
+                                                                                "title": "The quantity_threshold schema",
+                                                                                "description": "An explanation about the purpose of this instance.",
+                                                                                "default": 0,
+                                                                                "examples": [
+                                                                                    1
+                                                                                ]
+                                                                            },
+                                                                            "unit_discount_price": {
+                                                                                "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/applicable_pricing/properties/volume_prices/items/anyOf/0/properties/unit_discount_price",
+                                                                                "type": "null",
+                                                                                "title": "The unit_discount_price schema",
+                                                                                "description": "An explanation about the purpose of this instance.",
+                                                                                "default": null,
+                                                                                "examples": [
+                                                                                    null
+                                                                                ]
+                                                                            },
+                                                                            "unit_origin_price": {
+                                                                                "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/applicable_pricing/properties/volume_prices/items/anyOf/0/properties/unit_origin_price",
+                                                                                "type": "number",
+                                                                                "title": "The unit_origin_price schema",
+                                                                                "description": "An explanation about the purpose of this instance.",
+                                                                                "default": 0.0,
+                                                                                "examples": [
+                                                                                    500.0
+                                                                                ]
+                                                                            }
+                                                                        },
+                                                                        "additionalProperties": true
+                                                                    }
+                                                                ]
+                                                            }
+                                                        }
+                                                    },
+                                                    "additionalProperties": true
+                                                },
+                                                "channels": {
+                                                    "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/channels",
+                                                    "type": "array",
+                                                    "title": "The channels schema",
+                                                    "description": "An explanation about the purpose of this instance.",
+                                                    "default": [],
+                                                    "examples": [
+                                                        [
+                                                            "INIT"
+                                                        ]
+                                                    ],
+                                                    "additionalItems": true,
+                                                    "items": {
+                                                        "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/channels/items",
+                                                        "anyOf": [
+                                                            {
+                                                                "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/channels/items/anyOf/0",
+                                                                "type": "string",
+                                                                "title": "The first anyOf schema",
+                                                                "description": "An explanation about the purpose of this instance.",
+                                                                "default": "",
+                                                                "examples": [
+                                                                    "INIT"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                "currency_iso_code": {
+                                                    "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/currency_iso_code",
+                                                    "type": "string",
+                                                    "title": "The currency_iso_code schema",
+                                                    "description": "An explanation about the purpose of this instance.",
+                                                    "default": "",
+                                                    "examples": [
+                                                        "USD"
+                                                    ]
+                                                },
+                                                "description": {
+                                                    "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/description",
+                                                    "type": "null",
+                                                    "title": "The description schema",
+                                                    "description": "An explanation about the purpose of this instance.",
+                                                    "default": null,
+                                                    "examples": [
+                                                        null
+                                                    ]
+                                                },
+                                                "discount": {
+                                                    "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/discount",
+                                                    "type": "null",
+                                                    "title": "The discount schema",
+                                                    "description": "An explanation about the purpose of this instance.",
+                                                    "default": null,
+                                                    "examples": [
+                                                        null
+                                                    ]
+                                                },
+                                                "fulfillment": {
+                                                    "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/fulfillment",
+                                                    "type": "object",
+                                                    "title": "The fulfillment schema",
+                                                    "description": "An explanation about the purpose of this instance.",
+                                                    "default": {},
+                                                    "examples": [
+                                                        {
+                                                            "center": {
+                                                                "code": "DEFAULT"
+                                                            }
+                                                        }
+                                                    ],
+                                                    "required": [
+                                                        "center"
+                                                    ],
+                                                    "properties": {
+                                                        "center": {
+                                                            "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/fulfillment/properties/center",
+                                                            "type": "object",
+                                                            "title": "The center schema",
+                                                            "description": "An explanation about the purpose of this instance.",
+                                                            "default": {},
+                                                            "examples": [
+                                                                {
+                                                                    "code": "DEFAULT"
+                                                                }
+                                                            ],
+                                                            "required": [
+                                                                "code"
+                                                            ],
+                                                            "properties": {
+                                                                "code": {
+                                                                    "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/fulfillment/properties/center/properties/code",
+                                                                    "type": "string",
+                                                                    "title": "The code schema",
+                                                                    "description": "An explanation about the purpose of this instance.",
+                                                                    "default": "",
+                                                                    "examples": [
+                                                                        "DEFAULT"
+                                                                    ]
+                                                                }
+                                                            },
+                                                            "additionalProperties": true
+                                                        }
+                                                    },
+                                                    "additionalProperties": true
+                                                },
+                                                "inactivity_reasons": {
+                                                    "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/inactivity_reasons",
+                                                    "type": "array",
+                                                    "title": "The inactivity_reasons schema",
+                                                    "description": "An explanation about the purpose of this instance.",
+                                                    "default": [],
+                                                    "examples": [
+                                                        []
+                                                    ],
+                                                    "additionalItems": true,
+                                                    "items": {
+                                                        "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/inactivity_reasons/items"
+                                                    }
+                                                },
+                                                "is_professional": {
+                                                    "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/is_professional",
+                                                    "type": "boolean",
+                                                    "title": "The is_professional schema",
+                                                    "description": "An explanation about the purpose of this instance.",
+                                                    "default": false,
+                                                    "examples": [
+                                                        true
+                                                    ]
+                                                },
+                                                "logistic_class": {
+                                                    "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/logistic_class",
+                                                    "type": "object",
+                                                    "title": "The logistic_class schema",
+                                                    "description": "An explanation about the purpose of this instance.",
+                                                    "default": {},
+                                                    "examples": [
+                                                        {
+                                                            "code": "m",
+                                                            "label": "Medium"
+                                                        }
+                                                    ],
+                                                    "required": [
+                                                        "code",
+                                                        "label"
+                                                    ],
+                                                    "properties": {
+                                                        "code": {
+                                                            "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/logistic_class/properties/code",
+                                                            "type": "string",
+                                                            "title": "The code schema",
+                                                            "description": "An explanation about the purpose of this instance.",
+                                                            "default": "",
+                                                            "examples": [
+                                                                "m"
+                                                            ]
+                                                        },
+                                                        "label": {
+                                                            "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/logistic_class/properties/label",
+                                                            "type": "string",
+                                                            "title": "The label schema",
+                                                            "description": "An explanation about the purpose of this instance.",
+                                                            "default": "",
+                                                            "examples": [
+                                                                "Medium"
+                                                            ]
+                                                        }
+                                                    },
+                                                    "additionalProperties": true
+                                                },
+                                                "min_quantity_alert": {
+                                                    "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/min_quantity_alert",
+                                                    "type": "null",
+                                                    "title": "The min_quantity_alert schema",
+                                                    "description": "An explanation about the purpose of this instance.",
+                                                    "default": null,
+                                                    "examples": [
+                                                        null
+                                                    ]
+                                                },
+                                                "min_shipping_price": {
+                                                    "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/min_shipping_price",
+                                                    "type": "number",
+                                                    "title": "The min_shipping_price schema",
+                                                    "description": "An explanation about the purpose of this instance.",
+                                                    "default": 0.0,
+                                                    "examples": [
+                                                        7.0
+                                                    ]
+                                                },
+                                                "min_shipping_price_additional": {
+                                                    "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/min_shipping_price_additional",
+                                                    "type": "number",
+                                                    "title": "The min_shipping_price_additional schema",
+                                                    "description": "An explanation about the purpose of this instance.",
+                                                    "default": 0.0,
+                                                    "examples": [
+                                                        2.0
+                                                    ]
+                                                },
+                                                "min_shipping_type": {
+                                                    "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/min_shipping_type",
+                                                    "type": "string",
+                                                    "title": "The min_shipping_type schema",
+                                                    "description": "An explanation about the purpose of this instance.",
+                                                    "default": "",
+                                                    "examples": [
+                                                        "STD"
+                                                    ]
+                                                },
+                                                "min_shipping_zone": {
+                                                    "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/min_shipping_zone",
+                                                    "type": "string",
+                                                    "title": "The min_shipping_zone schema",
+                                                    "description": "An explanation about the purpose of this instance.",
+                                                    "default": "",
+                                                    "examples": [
+                                                        "us"
+                                                    ]
+                                                },
+                                                "nb_evaluation": {
+                                                    "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/nb_evaluation",
+                                                    "type": "integer",
+                                                    "title": "The nb_evaluation schema",
+                                                    "description": "An explanation about the purpose of this instance.",
+                                                    "default": 0,
+                                                    "examples": [
+                                                        0
+                                                    ]
+                                                },
+                                                "offer_additional_fields": {
+                                                    "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/offer_additional_fields",
+                                                    "type": "array",
+                                                    "title": "The offer_additional_fields schema",
+                                                    "description": "An explanation about the purpose of this instance.",
+                                                    "default": [],
+                                                    "examples": [
+                                                        []
+                                                    ],
+                                                    "additionalItems": true,
+                                                    "items": {
+                                                        "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/offer_additional_fields/items"
+                                                    }
+                                                },
+                                                "offer_id": {
+                                                    "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/offer_id",
+                                                    "type": "integer",
+                                                    "title": "The offer_id schema",
+                                                    "description": "An explanation about the purpose of this instance.",
+                                                    "default": 0,
+                                                    "examples": [
+                                                        2000
+                                                    ]
+                                                },
+                                                "premium": {
+                                                    "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/premium",
+                                                    "type": "boolean",
+                                                    "title": "The premium schema",
+                                                    "description": "An explanation about the purpose of this instance.",
+                                                    "default": false,
+                                                    "examples": [
+                                                        false
+                                                    ]
+                                                },
+                                                "price": {
+                                                    "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/price",
+                                                    "type": "number",
+                                                    "title": "The price schema",
+                                                    "description": "An explanation about the purpose of this instance.",
+                                                    "default": 0.0,
+                                                    "examples": [
+                                                        500.0
+                                                    ]
+                                                },
+                                                "price_additional_info": {
+                                                    "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/price_additional_info",
+                                                    "type": "null",
+                                                    "title": "The price_additional_info schema",
+                                                    "description": "An explanation about the purpose of this instance.",
+                                                    "default": null,
+                                                    "examples": [
+                                                        null
+                                                    ]
+                                                },
+                                                "quantity": {
+                                                    "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/quantity",
+                                                    "type": "integer",
+                                                    "title": "The quantity schema",
+                                                    "description": "An explanation about the purpose of this instance.",
+                                                    "default": 0,
+                                                    "examples": [
+                                                        1
+                                                    ]
+                                                },
+                                                "shop_grade": {
+                                                    "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/shop_grade",
+                                                    "type": "null",
+                                                    "title": "The shop_grade schema",
+                                                    "description": "An explanation about the purpose of this instance.",
+                                                    "default": null,
+                                                    "examples": [
+                                                        null
+                                                    ]
+                                                },
+                                                "shop_id": {
+                                                    "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/shop_id",
+                                                    "type": "integer",
+                                                    "title": "The shop_id schema",
+                                                    "description": "An explanation about the purpose of this instance.",
+                                                    "default": 0,
+                                                    "examples": [
+                                                        2000
+                                                    ]
+                                                },
+                                                "shop_name": {
+                                                    "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/shop_name",
+                                                    "type": "string",
+                                                    "title": "The shop_name schema",
+                                                    "description": "An explanation about the purpose of this instance.",
+                                                    "default": "",
+                                                    "examples": [
+                                                        "DJ's Art"
+                                                    ]
+                                                },
+                                                "state_code": {
+                                                    "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/state_code",
+                                                    "type": "string",
+                                                    "title": "The state_code schema",
+                                                    "description": "An explanation about the purpose of this instance.",
+                                                    "default": "",
+                                                    "examples": [
+                                                        "1"
+                                                    ]
+                                                },
+                                                "total_price": {
+                                                    "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/total_price",
+                                                    "type": "number",
+                                                    "title": "The total_price schema",
+                                                    "description": "An explanation about the purpose of this instance.",
+                                                    "default": 0.0,
+                                                    "examples": [
+                                                        507.0
+                                                    ]
+                                                }
+                                            },
+                                            "additionalProperties": true
+                                        }
+                                    ]
+                                }
+                            },
+                            "product_brand": {
+                                "$id": "#/properties/products/items/anyOf/0/properties/product_brand",
+                                "type": "string",
+                                "title": "The product_brand schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "Project 62"
+                                ]
+                            },
+                            "product_description": {
+                                "$id": "#/properties/products/items/anyOf/0/properties/product_description",
+                                "type": "string",
+                                "title": "The product_description schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "Refresh any blank wall in your home in artistic style with this Abstract Wall Art from Project 62?. The framed canvas with brushed gel wall art features an abstract pattern "
+                                ]
+                            },
+                            "product_media": {
+                                "$id": "#/properties/products/items/anyOf/0/properties/product_media",
+                                "type": "object",
+                                "title": "The product_media schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": {},
+                                "examples": [
+                                    {
+                                        "media_url": "https://media-dev-eu-2.mirakl.net/MEDIA/71cc9baac3d1493ab81a468a114f444f",
+                                        "type": "LARGE"
+                                    }
+                                ],
+                                "required": [
+                                    "media_url",
+                                    "type"
+                                ],
+                                "properties": {
+                                    "media_url": {
+                                        "$id": "#/properties/products/items/anyOf/0/properties/product_media/properties/media_url",
+                                        "type": "string",
+                                        "title": "The media_url schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": "",
+                                        "examples": [
+                                            "https://media-dev-eu-2.mirakl.net/MEDIA/71cc9baac3d1493ab81a468a114f444f"
+                                        ]
+                                    },
+                                    "type": {
+                                        "$id": "#/properties/products/items/anyOf/0/properties/product_media/properties/type",
+                                        "type": "string",
+                                        "title": "The type schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": "",
+                                        "examples": [
+                                            "LARGE"
+                                        ]
+                                    }
+                                },
+                                "additionalProperties": true
+                            },
+                            "product_references": {
+                                "$id": "#/properties/products/items/anyOf/0/properties/product_references",
+                                "type": "array",
+                                "title": "The product_references schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": [],
+                                "examples": [
+                                    []
+                                ],
+                                "additionalItems": true,
+                                "items": {
+                                    "$id": "#/properties/products/items/anyOf/0/properties/product_references/items"
+                                }
+                            },
+                            "product_sku": {
+                                "$id": "#/properties/products/items/anyOf/0/properties/product_sku",
+                                "type": "string",
+                                "title": "The product_sku schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "OperatorSku2"
+                                ]
+                            },
+                            "product_title": {
+                                "$id": "#/properties/products/items/anyOf/0/properties/product_title",
+                                "type": "string",
+                                "title": "The product_title schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "Abstract Mountain Framed Canvas"
+                                ]
+                            },
+                            "total_count": {
+                                "$id": "#/properties/products/items/anyOf/0/properties/total_count",
+                                "type": "integer",
+                                "title": "The total_count schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": 0,
+                                "examples": [
+                                    1
+                                ]
+                            }
+                        },
+                        "additionalProperties": true
+                    }
+                ]
+            }
+        }
+    },
+    "additionalProperties": true
+}
