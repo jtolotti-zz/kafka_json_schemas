@@ -2,35 +2,34 @@
     "$schema": "http://json-schema.org/draft-07/schema",
     "$id": "http://minted.com/mirakl/product.json",
     "type": "object",
-    "title": "Kafka Product JSON Schema",
-    "description": "The root schema for Mirakl product synch kafka job.",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
     "default": {},
     "examples": [
         {
-            "data": {
-                "brand": "Project 62",
-                "category_id": "cat-5",
-                "product_description": "Refresh any blank wall in your home in artistic style with this Abstract Wall Art from Project 62?. The framed canvas with brushed gel wall art features an abstract pattern ",
-                "product_name": "Abstract Mountain Framed Canvas",
-                "image_size1": {
-                    "source": "https://media-dev-eu-2.mirakl.net/SOURCE/52b06f51510d420299eeb1e1263b4d68"
+            "brand": "Project 62",
+            "category_id": "cat-5",
+            "product_description": "Refresh any blank wall in your home in artistic style with this Abstract Wall Art from Project 62?. The framed canvas with brushed gel wall art features an abstract pattern ",
+            "product_name": "Abstract Mountain Framed Canvas",
+            "product_images": [
+                {
+                    "product_image": "https://media-dev-eu-2.mirakl.net/SOURCE/52b06f51510d420299eeb1e1263b4d68"
                 },
-                "image_size2": {
-                    "source": "https://media-dev-eu-2.mirakl.net/SOURCE/495662b33a6042f59f91d0fc69cdfd8e"
+                {
+                    "product_image": "https://media-dev-eu-2.mirakl.net/SOURCE/495662b33a6042f59f91d0fc69cdfd8e"
                 },
-                "image_size3": {
-                    "source": "https://media-dev-eu-2.mirakl.net/SOURCE/0229610b9afc4a7485799296c6047065"
+                {
+                    "product_image": "https://media-dev-eu-2.mirakl.net/SOURCE/0229610b9afc4a7485799296c6047065"
                 }
-            },
+            ],
             "mirakl_product_id": "7520309e-d20a-4ca2-9523-fcb209bb9f45",
             "creation_date": "2021-09-01T19:15:57.258Z",
             "update_date": "2021-09-01T19:22:30.667Z",
             "product_sku": "OperatorSku2",
-            "acceptance": {
-                "status": "ACCEPTED"
-            },
+            "acceptance_status": "ACCEPTED",
+            "synchronization_status": "SYNCHRONIZED",
             "validation": {
-                "status": "VALID",
+                "validation_status": "VALID",
                 "product_feeds": [
                     {
                         "code": "feed-1",
@@ -38,12 +37,9 @@
                     }
                 ]
             },
-            "synchronization": {
-                "status": "SYNCHRONIZED"
-            },
             "catalogs": [],
             "product_urls": [],
-            "sources": [
+            "seller": [
                 {
                     "provider_code": "2003",
                     "provider_sku": "TestShopSku1"
@@ -56,185 +52,112 @@
         }
     ],
     "required": [
-        "data",
+        "category_id",
+        "product_name",
         "mirakl_product_id",
         "creation_date",
-        "update_date",
         "product_sku",
-        "acceptance",
+        "acceptance_status",
         "validation",
-        "synchronization",
-        "catalogs",
-        "product_urls",
-        "sources",
-        "selling_authorization"
+        "seller",
     ],
     "properties": {
-        "data": {
-            "$id": "#/properties/data",
-            "type": "object",
-            "title": "The data schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": {},
+        "brand": {
+            "$id": "#/properties/brand",
+            "type": "string",
+            "title": "The brand schema",
+            "description": "The product brand.",
+            "default": "",
             "examples": [
-                {
-                    "brand": "Project 62",
-                    "category_id": "cat-5",
-                    "product_description": "Refresh any blank wall in your home in artistic style with this Abstract Wall Art from Project 62?. The framed canvas with brushed gel wall art features an abstract pattern ",
-                    "product_name": "Abstract Mountain Framed Canvas",
-                    "image_size1": {
-                        "source": "https://media-dev-eu-2.mirakl.net/SOURCE/52b06f51510d420299eeb1e1263b4d68"
+                "Project 62"
+            ]
+        },
+        "category_id": {
+            "$id": "#/properties/category_id",
+            "type": "string",
+            "title": "The category_id schema",
+            "description": "The product category_id.",
+            "default": "",
+            "examples": [
+                "cat-5"
+            ]
+        },
+        "product_description": {
+            "$id": "#/properties/product_description",
+            "type": "string",
+            "title": "The product_description schema",
+            "description": "The product_description.",
+            "default": "",
+            "examples": [
+                "Refresh any blank wall in your home in artistic style with this Abstract Wall Art from Project 62?. The framed canvas with brushed gel wall art features an abstract pattern "
+            ]
+        },
+        "product_name": {
+            "$id": "#/properties/product_name",
+            "type": "string",
+            "title": "The product_name schema",
+            "description": "The product_name.",
+            "default": "",
+            "examples": [
+                "Abstract Mountain Framed Canvas"
+            ]
+        },
+        "product_images": {
+            "$id": "#/properties/product_images",
+            "type": "array",
+            "title": "The product_images schema",
+            "description": "The product images list.",
+            "default": [],
+            "examples": [
+                [
+                    {
+                        "product_image": "https://media-dev-eu-2.mirakl.net/SOURCE/52b06f51510d420299eeb1e1263b4d68"
                     },
-                    "image_size2": {
-                        "source": "https://media-dev-eu-2.mirakl.net/SOURCE/495662b33a6042f59f91d0fc69cdfd8e"
-                    },
-                    "image_size3": {
-                        "source": "https://media-dev-eu-2.mirakl.net/SOURCE/0229610b9afc4a7485799296c6047065"
+                    {
+                        "product_image": "https://media-dev-eu-2.mirakl.net/SOURCE/495662b33a6042f59f91d0fc69cdfd8e"
                     }
-                }
+                ]
             ],
-            "required": [
-                "brand",
-                "category_id",
-                "product_description",
-                "product_name",
-                "image_size1",
-                "image_size2",
-                "image_size3"
-            ],
-            "properties": {
-                "brand": {
-                    "$id": "#/properties/data/properties/brand",
-                    "type": "string",
-                    "title": "The brand schema",
-                    "description": "An explanation about the purpose of this instance.",
-                    "default": "",
-                    "examples": [
-                        "Project 62"
-                    ]
-                },
-                "category_id": {
-                    "$id": "#/properties/data/properties/category_id",
-                    "type": "string",
-                    "title": "The category_id schema",
-                    "description": "An explanation about the purpose of this instance.",
-                    "default": "",
-                    "examples": [
-                        "cat-5"
-                    ]
-                },
-                "product_description": {
-                    "$id": "#/properties/data/properties/product_description",
-                    "type": "string",
-                    "title": "The product_description schema",
-                    "description": "An explanation about the purpose of this instance.",
-                    "default": "",
-                    "examples": [
-                        "Refresh any blank wall in your home in artistic style with this Abstract Wall Art from Project 62?. The framed canvas with brushed gel wall art features an abstract pattern "
-                    ]
-                },
-                "product_name": {
-                    "$id": "#/properties/data/properties/product_name",
-                    "type": "string",
-                    "title": "The product_name schema",
-                    "description": "An explanation about the purpose of this instance.",
-                    "default": "",
-                    "examples": [
-                        "Abstract Mountain Framed Canvas"
-                    ]
-                },
-                "image_size1": {
-                    "$id": "#/properties/data/properties/image_size1",
-                    "type": "object",
-                    "title": "The image_size1 schema",
-                    "description": "An explanation about the purpose of this instance.",
-                    "default": {},
-                    "examples": [
-                        {
-                            "source": "https://media-dev-eu-2.mirakl.net/SOURCE/52b06f51510d420299eeb1e1263b4d68"
-                        }
-                    ],
-                    "required": [
-                        "source"
-                    ],
-                    "properties": {
-                        "source": {
-                            "$id": "#/properties/data/properties/image_size1/properties/source",
-                            "type": "string",
-                            "title": "The source schema",
-                            "description": "An explanation about the purpose of this instance.",
-                            "default": "",
-                            "examples": [
-                                "https://media-dev-eu-2.mirakl.net/SOURCE/52b06f51510d420299eeb1e1263b4d68"
-                            ]
-                        }
-                    },
-                    "additionalProperties": true
-                },
-                "image_size2": {
-                    "$id": "#/properties/data/properties/image_size2",
-                    "type": "object",
-                    "title": "The image_size2 schema",
-                    "description": "An explanation about the purpose of this instance.",
-                    "default": {},
-                    "examples": [
-                        {
-                            "source": "https://media-dev-eu-2.mirakl.net/SOURCE/495662b33a6042f59f91d0fc69cdfd8e"
-                        }
-                    ],
-                    "required": [
-                        "source"
-                    ],
-                    "properties": {
-                        "source": {
-                            "$id": "#/properties/data/properties/image_size2/properties/source",
-                            "type": "string",
-                            "title": "The source schema",
-                            "description": "An explanation about the purpose of this instance.",
-                            "default": "",
-                            "examples": [
-                                "https://media-dev-eu-2.mirakl.net/SOURCE/495662b33a6042f59f91d0fc69cdfd8e"
-                            ]
-                        }
-                    },
-                    "additionalProperties": true
-                },
-                "image_size3": {
-                    "$id": "#/properties/data/properties/image_size3",
-                    "type": "object",
-                    "title": "The image_size3 schema",
-                    "description": "An explanation about the purpose of this instance.",
-                    "default": {},
-                    "examples": [
-                        {
-                            "source": "https://media-dev-eu-2.mirakl.net/SOURCE/0229610b9afc4a7485799296c6047065"
-                        }
-                    ],
-                    "required": [
-                        "source"
-                    ],
-                    "properties": {
-                        "source": {
-                            "$id": "#/properties/data/properties/image_size3/properties/source",
-                            "type": "string",
-                            "title": "The source schema",
-                            "description": "An explanation about the purpose of this instance.",
-                            "default": "",
-                            "examples": [
-                                "https://media-dev-eu-2.mirakl.net/SOURCE/0229610b9afc4a7485799296c6047065"
-                            ]
-                        }
-                    },
-                    "additionalProperties": true
-                }
-            },
-            "additionalProperties": true
+            "additionalItems": true,
+            "items": {
+                "$id": "#/properties/product_images/items",
+                "anyOf": [
+                    {
+                        "$id": "#/properties/product_images/items/anyOf/0",
+                        "type": "object",
+                        "title": "The first anyOf schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": {},
+                        "examples": [
+                            {
+                                "product_image": "https://media-dev-eu-2.mirakl.net/SOURCE/52b06f51510d420299eeb1e1263b4d68"
+                            }
+                        ],
+                        "required": [
+                            "product_image"
+                        ],
+                        "properties": {
+                            "product_image": {
+                                "$id": "#/properties/product_images/items/anyOf/0/properties/product_image",
+                                "type": "string",
+                                "title": "The product_image schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "https://media-dev-eu-2.mirakl.net/SOURCE/52b06f51510d420299eeb1e1263b4d68"
+                                ]
+                            }
+                        },
+                        "additionalProperties": true
+                    }
+                ]
+            }
         },
         "mirakl_product_id": {
             "$id": "#/properties/mirakl_product_id",
             "type": "string",
             "title": "The mirakl_product_id schema",
-            "description": "An explanation about the purpose of this instance.",
+            "description": "The mirakl_product_id.",
             "default": "",
             "examples": [
                 "7520309e-d20a-4ca2-9523-fcb209bb9f45"
@@ -242,9 +165,9 @@
         },
         "creation_date": {
             "$id": "#/properties/creation_date",
-            "type": "string",
+            "type": "date-time",
             "title": "The creation_date schema",
-            "description": "An explanation about the purpose of this instance.",
+            "description": "The product creation date.",
             "default": "",
             "examples": [
                 "2021-09-01T19:15:57.258Z"
@@ -252,9 +175,9 @@
         },
         "update_date": {
             "$id": "#/properties/update_date",
-            "type": "string",
+            "type": "date-time",
             "title": "The update_date schema",
-            "description": "An explanation about the purpose of this instance.",
+            "description": "The product update date.",
             "default": "",
             "examples": [
                 "2021-09-01T19:22:30.667Z"
@@ -264,49 +187,41 @@
             "$id": "#/properties/product_sku",
             "type": "string",
             "title": "The product_sku schema",
-            "description": "An explanation about the purpose of this instance.",
+            "description": "The product sku.",
             "default": "",
             "examples": [
                 "OperatorSku2"
             ]
         },
-        "acceptance": {
-            "$id": "#/properties/acceptance",
-            "type": "object",
-            "title": "The acceptance schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": {},
+        "acceptance_status": {
+            "$id": "#/properties/acceptance_status",
+            "type": "string",
+            "title": "The acceptance_status schema",
+            "description": "The product acceptance_status.",
+            "default": "",
             "examples": [
-                {
-                    "status": "ACCEPTED"
-                }
-            ],
-            "required": [
-                "status"
-            ],
-            "properties": {
-                "status": {
-                    "$id": "#/properties/acceptance/properties/status",
-                    "type": "string",
-                    "title": "The status schema",
-                    "description": "An explanation about the purpose of this instance.",
-                    "default": "",
-                    "examples": [
-                        "ACCEPTED"
-                    ]
-                }
-            },
-            "additionalProperties": true
+                "ACCEPTED"
+            ]
+        },
+        "synchronization_status": {
+            "$id": "#/properties/synchronization_status",
+            "type": "string",
+            "title": "The synchronization_status schema",
+            "description": "The product synchronization_status.",
+            "default": "",
+            "examples": [
+                "SYNCHRONIZED"
+            ]
         },
         "validation": {
             "$id": "#/properties/validation",
             "type": "object",
             "title": "The validation schema",
-            "description": "An explanation about the purpose of this instance.",
+            "description": "The map with validation data.",
             "default": {},
             "examples": [
                 {
-                    "status": "VALID",
+                    "validation_status": "VALID",
                     "product_feeds": [
                         {
                             "code": "feed-1",
@@ -316,15 +231,15 @@
                 }
             ],
             "required": [
-                "status",
+                "validation_status",
                 "product_feeds"
             ],
             "properties": {
-                "status": {
-                    "$id": "#/properties/validation/properties/status",
+                "validation_status": {
+                    "$id": "#/properties/validation/properties/validation_status",
                     "type": "string",
-                    "title": "The status schema",
-                    "description": "An explanation about the purpose of this instance.",
+                    "title": "The validation_status schema",
+                    "description": "The validation_status.",
                     "default": "",
                     "examples": [
                         "VALID"
@@ -334,7 +249,7 @@
                     "$id": "#/properties/validation/properties/product_feeds",
                     "type": "array",
                     "title": "The product_feeds schema",
-                    "description": "An explanation about the purpose of this instance.",
+                    "description": "The product_feeds.",
                     "default": [],
                     "examples": [
                         [
@@ -394,34 +309,6 @@
             },
             "additionalProperties": true
         },
-        "synchronization": {
-            "$id": "#/properties/synchronization",
-            "type": "object",
-            "title": "The synchronization schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": {},
-            "examples": [
-                {
-                    "status": "SYNCHRONIZED"
-                }
-            ],
-            "required": [
-                "status"
-            ],
-            "properties": {
-                "status": {
-                    "$id": "#/properties/synchronization/properties/status",
-                    "type": "string",
-                    "title": "The status schema",
-                    "description": "An explanation about the purpose of this instance.",
-                    "default": "",
-                    "examples": [
-                        "SYNCHRONIZED"
-                    ]
-                }
-            },
-            "additionalProperties": true
-        },
         "catalogs": {
             "$id": "#/properties/catalogs",
             "type": "array",
@@ -450,10 +337,10 @@
                 "$id": "#/properties/product_urls/items"
             }
         },
-        "sources": {
-            "$id": "#/properties/sources",
+        "seller": {
+            "$id": "#/properties/seller",
             "type": "array",
-            "title": "The sources schema",
+            "title": "The seller schema",
             "description": "An explanation about the purpose of this instance.",
             "default": [],
             "examples": [
@@ -466,10 +353,10 @@
             ],
             "additionalItems": true,
             "items": {
-                "$id": "#/properties/sources/items",
+                "$id": "#/properties/seller/items",
                 "anyOf": [
                     {
-                        "$id": "#/properties/sources/items/anyOf/0",
+                        "$id": "#/properties/seller/items/anyOf/0",
                         "type": "object",
                         "title": "The first anyOf schema",
                         "description": "An explanation about the purpose of this instance.",
@@ -486,7 +373,7 @@
                         ],
                         "properties": {
                             "provider_code": {
-                                "$id": "#/properties/sources/items/anyOf/0/properties/provider_code",
+                                "$id": "#/properties/seller/items/anyOf/0/properties/provider_code",
                                 "type": "string",
                                 "title": "The provider_code schema",
                                 "description": "An explanation about the purpose of this instance.",
@@ -496,7 +383,7 @@
                                 ]
                             },
                             "provider_sku": {
-                                "$id": "#/properties/sources/items/anyOf/0/properties/provider_sku",
+                                "$id": "#/properties/seller/items/anyOf/0/properties/provider_sku",
                                 "type": "string",
                                 "title": "The provider_sku schema",
                                 "description": "An explanation about the purpose of this instance.",
