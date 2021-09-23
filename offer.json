@@ -2,15 +2,16 @@
     "$schema": "http://json-schema.org/draft-07/schema",
     "$id": "http://minted.com/mirakl/offer.json",
     "type": "object",
-    "title": "Kafka Offer JSON Schema",
-    "description": "The root schema for Mirakl offer synch kafka job.",
+    "title": "The root kafka schema for Mirakl offer",
+    "description": "Mirakl Kafka Offer Schema.",
     "default": {},
     "examples": [
         {
             "products": [
                 {
-                    "category_code": "cat-5",
-                    "category_label": "Original Wall Art",
+                    "product_sku": "OperatorSku2",
+                    "product_references": [],
+                    "total_count": 1,
                     "offers": [
                         {
                             "active": true,
@@ -84,17 +85,7 @@
                             "state_code": "1",
                             "total_price": 507.0
                         }
-                    ],
-                    "product_brand": "Project 62",
-                    "product_description": "Refresh any blank wall in your home in artistic style with this Abstract Wall Art from Project 62?. The framed canvas with brushed gel wall art features an abstract pattern ",
-                    "product_media": {
-                        "media_url": "https://media-dev-eu-2.mirakl.net/MEDIA/71cc9baac3d1493ab81a468a114f444f",
-                        "type": "LARGE"
-                    },
-                    "product_references": [],
-                    "product_sku": "OperatorSku2",
-                    "product_title": "Abstract Mountain Framed Canvas",
-                    "total_count": 1
+                    ]
                 }
             ]
         }
@@ -112,8 +103,9 @@
             "examples": [
                 [
                     {
-                        "category_code": "cat-5",
-                        "category_label": "Original Wall Art",
+                        "product_sku": "OperatorSku2",
+                        "product_references": [],
+                        "total_count": 1,
                         "offers": [
                             {
                                 "active": true,
@@ -187,17 +179,7 @@
                                 "state_code": "1",
                                 "total_price": 507.0
                             }
-                        ],
-                        "product_brand": "Project 62",
-                        "product_description": "Refresh any blank wall in your home in artistic style with this Abstract Wall Art from Project 62?. The framed canvas with brushed gel wall art features an abstract pattern ",
-                        "product_media": {
-                            "media_url": "https://media-dev-eu-2.mirakl.net/MEDIA/71cc9baac3d1493ab81a468a114f444f",
-                            "type": "LARGE"
-                        },
-                        "product_references": [],
-                        "product_sku": "OperatorSku2",
-                        "product_title": "Abstract Mountain Framed Canvas",
-                        "total_count": 1
+                        ]
                     }
                 ]
             ],
@@ -213,8 +195,9 @@
                         "default": {},
                         "examples": [
                             {
-                                "category_code": "cat-5",
-                                "category_label": "Original Wall Art",
+                                "product_sku": "OperatorSku2",
+                                "product_references": [],
+                                "total_count": 1,
                                 "offers": [
                                     {
                                         "active": true,
@@ -288,50 +271,46 @@
                                         "state_code": "1",
                                         "total_price": 507.0
                                     }
-                                ],
-                                "product_brand": "Project 62",
-                                "product_description": "Refresh any blank wall in your home in artistic style with this Abstract Wall Art from Project 62?. The framed canvas with brushed gel wall art features an abstract pattern ",
-                                "product_media": {
-                                    "media_url": "https://media-dev-eu-2.mirakl.net/MEDIA/71cc9baac3d1493ab81a468a114f444f",
-                                    "type": "LARGE"
-                                },
-                                "product_references": [],
-                                "product_sku": "OperatorSku2",
-                                "product_title": "Abstract Mountain Framed Canvas",
-                                "total_count": 1
+                                ]
                             }
                         ],
                         "required": [
-                            "category_code",
-                            "category_label",
-                            "offers",
-                            "product_brand",
-                            "product_description",
-                            "product_media",
-                            "product_references",
                             "product_sku",
-                            "product_title",
-                            "total_count"
+                            "offers"
                         ],
                         "properties": {
-                            "category_code": {
-                                "$id": "#/properties/products/items/anyOf/0/properties/category_code",
+                            "product_sku": {
+                                "$id": "#/properties/products/items/anyOf/0/properties/product_sku",
                                 "type": "string",
-                                "title": "The category_code schema",
+                                "title": "The product_sku schema",
                                 "description": "An explanation about the purpose of this instance.",
                                 "default": "",
                                 "examples": [
-                                    "cat-5"
+                                    "OperatorSku2"
                                 ]
                             },
-                            "category_label": {
-                                "$id": "#/properties/products/items/anyOf/0/properties/category_label",
-                                "type": "string",
-                                "title": "The category_label schema",
+                            "product_references": {
+                                "$id": "#/properties/products/items/anyOf/0/properties/product_references",
+                                "type": "array",
+                                "title": "The product_references schema",
                                 "description": "An explanation about the purpose of this instance.",
-                                "default": "",
+                                "default": [],
                                 "examples": [
-                                    "Original Wall Art"
+                                    []
+                                ],
+                                "additionalItems": true,
+                                "items": {
+                                    "$id": "#/properties/products/items/anyOf/0/properties/product_references/items"
+                                }
+                            },
+                            "total_count": {
+                                "$id": "#/properties/products/items/anyOf/0/properties/total_count",
+                                "type": "integer",
+                                "title": "The total_count schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": 0,
+                                "examples": [
+                                    1
                                 ]
                             },
                             "offers": {
@@ -507,28 +486,14 @@
                                                 "applicable_pricing",
                                                 "channels",
                                                 "currency_iso_code",
-                                                "description",
                                                 "discount",
                                                 "fulfillment",
-                                                "inactivity_reasons",
-                                                "is_professional",
                                                 "logistic_class",
-                                                "min_quantity_alert",
-                                                "min_shipping_price",
-                                                "min_shipping_price_additional",
-                                                "min_shipping_type",
-                                                "min_shipping_zone",
-                                                "nb_evaluation",
-                                                "offer_additional_fields",
                                                 "offer_id",
-                                                "premium",
                                                 "price",
-                                                "price_additional_info",
                                                 "quantity",
                                                 "shop_grade",
                                                 "shop_id",
-                                                "shop_name",
-                                                "state_code",
                                                 "total_price"
                                             ],
                                             "properties": {
@@ -597,18 +562,13 @@
                                                                     }
                                                                 ],
                                                                 "required": [
-                                                                    "channel_code",
-                                                                    "discount_end_date",
-                                                                    "discount_start_date",
                                                                     "price",
-                                                                    "unit_discount_price",
-                                                                    "unit_origin_price",
                                                                     "volume_prices"
                                                                 ],
                                                                 "properties": {
                                                                     "channel_code": {
                                                                         "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/all_prices/items/anyOf/0/properties/channel_code",
-                                                                        "type": "null",
+                                                                        "type": "string",
                                                                         "title": "The channel_code schema",
                                                                         "description": "An explanation about the purpose of this instance.",
                                                                         "default": null,
@@ -618,7 +578,7 @@
                                                                     },
                                                                     "discount_end_date": {
                                                                         "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/all_prices/items/anyOf/0/properties/discount_end_date",
-                                                                        "type": "null",
+                                                                        "type": "date-time",
                                                                         "title": "The discount_end_date schema",
                                                                         "description": "An explanation about the purpose of this instance.",
                                                                         "default": null,
@@ -628,7 +588,7 @@
                                                                     },
                                                                     "discount_start_date": {
                                                                         "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/all_prices/items/anyOf/0/properties/discount_start_date",
-                                                                        "type": "null",
+                                                                        "type": "date-time",
                                                                         "title": "The discount_start_date schema",
                                                                         "description": "An explanation about the purpose of this instance.",
                                                                         "default": null,
@@ -648,7 +608,7 @@
                                                                     },
                                                                     "unit_discount_price": {
                                                                         "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/all_prices/items/anyOf/0/properties/unit_discount_price",
-                                                                        "type": "null",
+                                                                        "type": "number",
                                                                         "title": "The unit_discount_price schema",
                                                                         "description": "An explanation about the purpose of this instance.",
                                                                         "default": null,
@@ -729,7 +689,7 @@
                                                                                         },
                                                                                         "unit_discount_price": {
                                                                                             "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/all_prices/items/anyOf/0/properties/volume_prices/items/anyOf/0/properties/unit_discount_price",
-                                                                                            "type": "null",
+                                                                                            "type": "number",
                                                                                             "title": "The unit_discount_price schema",
                                                                                             "description": "An explanation about the purpose of this instance.",
                                                                                             "default": null,
@@ -794,18 +754,13 @@
                                                         }
                                                     ],
                                                     "required": [
-                                                        "channel_code",
-                                                        "discount_end_date",
-                                                        "discount_start_date",
                                                         "price",
-                                                        "unit_discount_price",
-                                                        "unit_origin_price",
                                                         "volume_prices"
                                                     ],
                                                     "properties": {
                                                         "channel_code": {
                                                             "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/applicable_pricing/properties/channel_code",
-                                                            "type": "null",
+                                                            "type": "string",
                                                             "title": "The channel_code schema",
                                                             "description": "An explanation about the purpose of this instance.",
                                                             "default": null,
@@ -815,7 +770,7 @@
                                                         },
                                                         "discount_end_date": {
                                                             "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/applicable_pricing/properties/discount_end_date",
-                                                            "type": "null",
+                                                            "type": "date-time",
                                                             "title": "The discount_end_date schema",
                                                             "description": "An explanation about the purpose of this instance.",
                                                             "default": null,
@@ -825,7 +780,7 @@
                                                         },
                                                         "discount_start_date": {
                                                             "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/applicable_pricing/properties/discount_start_date",
-                                                            "type": "null",
+                                                            "type": "date-time",
                                                             "title": "The discount_start_date schema",
                                                             "description": "An explanation about the purpose of this instance.",
                                                             "default": null,
@@ -845,7 +800,7 @@
                                                         },
                                                         "unit_discount_price": {
                                                             "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/applicable_pricing/properties/unit_discount_price",
-                                                            "type": "null",
+                                                            "type": "number",
                                                             "title": "The unit_discount_price schema",
                                                             "description": "An explanation about the purpose of this instance.",
                                                             "default": null,
@@ -926,10 +881,10 @@
                                                                             },
                                                                             "unit_discount_price": {
                                                                                 "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/applicable_pricing/properties/volume_prices/items/anyOf/0/properties/unit_discount_price",
-                                                                                "type": "null",
+                                                                                "type": "number",
                                                                                 "title": "The unit_discount_price schema",
                                                                                 "description": "An explanation about the purpose of this instance.",
-                                                                                "default": null,
+                                                                                "default": 0.0,
                                                                                 "examples": [
                                                                                     null
                                                                                 ]
@@ -993,7 +948,7 @@
                                                 },
                                                 "description": {
                                                     "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/description",
-                                                    "type": "null",
+                                                    "type": "string",
                                                     "title": "The description schema",
                                                     "description": "An explanation about the purpose of this instance.",
                                                     "default": null,
@@ -1003,7 +958,7 @@
                                                 },
                                                 "discount": {
                                                     "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/discount",
-                                                    "type": "null",
+                                                    "type": "number",
                                                     "title": "The discount schema",
                                                     "description": "An explanation about the purpose of this instance.",
                                                     "default": null,
@@ -1125,7 +1080,7 @@
                                                 },
                                                 "min_quantity_alert": {
                                                     "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/min_quantity_alert",
-                                                    "type": "null",
+                                                    "type": "integer",
                                                     "title": "The min_quantity_alert schema",
                                                     "description": "An explanation about the purpose of this instance.",
                                                     "default": null,
@@ -1229,7 +1184,7 @@
                                                 },
                                                 "price_additional_info": {
                                                     "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/price_additional_info",
-                                                    "type": "null",
+                                                    "type": "string",
                                                     "title": "The price_additional_info schema",
                                                     "description": "An explanation about the purpose of this instance.",
                                                     "default": null,
@@ -1249,7 +1204,7 @@
                                                 },
                                                 "shop_grade": {
                                                     "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/shop_grade",
-                                                    "type": "null",
+                                                    "type": "string",
                                                     "title": "The shop_grade schema",
                                                     "description": "An explanation about the purpose of this instance.",
                                                     "default": null,
@@ -1302,110 +1257,6 @@
                                         }
                                     ]
                                 }
-                            },
-                            "product_brand": {
-                                "$id": "#/properties/products/items/anyOf/0/properties/product_brand",
-                                "type": "string",
-                                "title": "The product_brand schema",
-                                "description": "An explanation about the purpose of this instance.",
-                                "default": "",
-                                "examples": [
-                                    "Project 62"
-                                ]
-                            },
-                            "product_description": {
-                                "$id": "#/properties/products/items/anyOf/0/properties/product_description",
-                                "type": "string",
-                                "title": "The product_description schema",
-                                "description": "An explanation about the purpose of this instance.",
-                                "default": "",
-                                "examples": [
-                                    "Refresh any blank wall in your home in artistic style with this Abstract Wall Art from Project 62?. The framed canvas with brushed gel wall art features an abstract pattern "
-                                ]
-                            },
-                            "product_media": {
-                                "$id": "#/properties/products/items/anyOf/0/properties/product_media",
-                                "type": "object",
-                                "title": "The product_media schema",
-                                "description": "An explanation about the purpose of this instance.",
-                                "default": {},
-                                "examples": [
-                                    {
-                                        "media_url": "https://media-dev-eu-2.mirakl.net/MEDIA/71cc9baac3d1493ab81a468a114f444f",
-                                        "type": "LARGE"
-                                    }
-                                ],
-                                "required": [
-                                    "media_url",
-                                    "type"
-                                ],
-                                "properties": {
-                                    "media_url": {
-                                        "$id": "#/properties/products/items/anyOf/0/properties/product_media/properties/media_url",
-                                        "type": "string",
-                                        "title": "The media_url schema",
-                                        "description": "An explanation about the purpose of this instance.",
-                                        "default": "",
-                                        "examples": [
-                                            "https://media-dev-eu-2.mirakl.net/MEDIA/71cc9baac3d1493ab81a468a114f444f"
-                                        ]
-                                    },
-                                    "type": {
-                                        "$id": "#/properties/products/items/anyOf/0/properties/product_media/properties/type",
-                                        "type": "string",
-                                        "title": "The type schema",
-                                        "description": "An explanation about the purpose of this instance.",
-                                        "default": "",
-                                        "examples": [
-                                            "LARGE"
-                                        ]
-                                    }
-                                },
-                                "additionalProperties": true
-                            },
-                            "product_references": {
-                                "$id": "#/properties/products/items/anyOf/0/properties/product_references",
-                                "type": "array",
-                                "title": "The product_references schema",
-                                "description": "An explanation about the purpose of this instance.",
-                                "default": [],
-                                "examples": [
-                                    []
-                                ],
-                                "additionalItems": true,
-                                "items": {
-                                    "$id": "#/properties/products/items/anyOf/0/properties/product_references/items"
-                                }
-                            },
-                            "product_sku": {
-                                "$id": "#/properties/products/items/anyOf/0/properties/product_sku",
-                                "type": "string",
-                                "title": "The product_sku schema",
-                                "description": "An explanation about the purpose of this instance.",
-                                "default": "",
-                                "examples": [
-                                    "OperatorSku2"
-                                ]
-                            },
-                            "product_title": {
-                                "$id": "#/properties/products/items/anyOf/0/properties/product_title",
-                                "type": "string",
-                                "title": "The product_title schema",
-                                "description": "An explanation about the purpose of this instance.",
-                                "default": "",
-                                "examples": [
-                                    "Abstract Mountain Framed Canvas"
-                                ]
-                            },
-                            "total_count": {
-                                "$id": "#/properties/products/items/anyOf/0/properties/total_count",
-                                "type": "integer",
-                                "title": "The total_count schema",
-                                "description": "An explanation about the purpose of this instance.",
-                                "default": 0,
-                                "examples": [
-                                    1
-                                ]
                             }
                         },
                         "additionalProperties": true
