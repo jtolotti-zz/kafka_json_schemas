@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema",
     "$id": "http://minted.com/mirakl/offer.json",
     "type": "object",
-    "title": "The root kafka schema for Mirakl offer",
-    "description": "Mirakl Kafka Offer Schema.",
+    "title": "Mirakl Offer Kafka JSON Schema",
+    "description": "The root schema for kafka offer synch from mirakl.",
     "default": {},
     "examples": [
         {
@@ -17,6 +17,7 @@
                             "active": true,
                             "all_prices": [
                                 {
+                                    "is_applicable": true,
                                     "channel_code": null,
                                     "discount_end_date": null,
                                     "discount_start_date": null,
@@ -34,22 +35,6 @@
                                 }
                             ],
                             "allow_quote_requests": false,
-                            "applicable_pricing": {
-                                "channel_code": null,
-                                "discount_end_date": null,
-                                "discount_start_date": null,
-                                "price": 500.0,
-                                "unit_discount_price": null,
-                                "unit_origin_price": 500.0,
-                                "volume_prices": [
-                                    {
-                                        "price": 500.0,
-                                        "quantity_threshold": 1,
-                                        "unit_discount_price": null,
-                                        "unit_origin_price": 500.0
-                                    }
-                                ]
-                            },
                             "channels": [
                                 "INIT"
                             ],
@@ -111,6 +96,7 @@
                                 "active": true,
                                 "all_prices": [
                                     {
+                                        "is_applicable": true,
                                         "channel_code": null,
                                         "discount_end_date": null,
                                         "discount_start_date": null,
@@ -128,22 +114,6 @@
                                     }
                                 ],
                                 "allow_quote_requests": false,
-                                "applicable_pricing": {
-                                    "channel_code": null,
-                                    "discount_end_date": null,
-                                    "discount_start_date": null,
-                                    "price": 500.0,
-                                    "unit_discount_price": null,
-                                    "unit_origin_price": 500.0,
-                                    "volume_prices": [
-                                        {
-                                            "price": 500.0,
-                                            "quantity_threshold": 1,
-                                            "unit_discount_price": null,
-                                            "unit_origin_price": 500.0
-                                        }
-                                    ]
-                                },
                                 "channels": [
                                     "INIT"
                                 ],
@@ -203,6 +173,7 @@
                                         "active": true,
                                         "all_prices": [
                                             {
+                                                "is_applicable": true,
                                                 "channel_code": null,
                                                 "discount_end_date": null,
                                                 "discount_start_date": null,
@@ -220,22 +191,6 @@
                                             }
                                         ],
                                         "allow_quote_requests": false,
-                                        "applicable_pricing": {
-                                            "channel_code": null,
-                                            "discount_end_date": null,
-                                            "discount_start_date": null,
-                                            "price": 500.0,
-                                            "unit_discount_price": null,
-                                            "unit_origin_price": 500.0,
-                                            "volume_prices": [
-                                                {
-                                                    "price": 500.0,
-                                                    "quantity_threshold": 1,
-                                                    "unit_discount_price": null,
-                                                    "unit_origin_price": 500.0
-                                                }
-                                            ]
-                                        },
                                         "channels": [
                                             "INIT"
                                         ],
@@ -325,6 +280,7 @@
                                             "active": true,
                                             "all_prices": [
                                                 {
+                                                    "is_applicable": true,
                                                     "channel_code": null,
                                                     "discount_end_date": null,
                                                     "discount_start_date": null,
@@ -342,22 +298,6 @@
                                                 }
                                             ],
                                             "allow_quote_requests": false,
-                                            "applicable_pricing": {
-                                                "channel_code": null,
-                                                "discount_end_date": null,
-                                                "discount_start_date": null,
-                                                "price": 500.0,
-                                                "unit_discount_price": null,
-                                                "unit_origin_price": 500.0,
-                                                "volume_prices": [
-                                                    {
-                                                        "price": 500.0,
-                                                        "quantity_threshold": 1,
-                                                        "unit_discount_price": null,
-                                                        "unit_origin_price": 500.0
-                                                    }
-                                                ]
-                                            },
                                             "channels": [
                                                 "INIT"
                                             ],
@@ -410,6 +350,7 @@
                                                     "active": true,
                                                     "all_prices": [
                                                         {
+                                                            "is_applicable": true,
                                                             "channel_code": null,
                                                             "discount_end_date": null,
                                                             "discount_start_date": null,
@@ -427,22 +368,6 @@
                                                         }
                                                     ],
                                                     "allow_quote_requests": false,
-                                                    "applicable_pricing": {
-                                                        "channel_code": null,
-                                                        "discount_end_date": null,
-                                                        "discount_start_date": null,
-                                                        "price": 500.0,
-                                                        "unit_discount_price": null,
-                                                        "unit_origin_price": 500.0,
-                                                        "volume_prices": [
-                                                            {
-                                                                "price": 500.0,
-                                                                "quantity_threshold": 1,
-                                                                "unit_discount_price": null,
-                                                                "unit_origin_price": 500.0
-                                                            }
-                                                        ]
-                                                    },
                                                     "channels": [
                                                         "INIT"
                                                     ],
@@ -482,18 +407,20 @@
                                             "required": [
                                                 "active",
                                                 "all_prices",
-                                                "allow_quote_requests",
-                                                "applicable_pricing",
                                                 "channels",
                                                 "currency_iso_code",
                                                 "discount",
                                                 "fulfillment",
+                                                "is_professional",
                                                 "logistic_class",
+                                                "nb_evaluation",
                                                 "offer_id",
+                                                "premium",
                                                 "price",
                                                 "quantity",
                                                 "shop_grade",
                                                 "shop_id",
+                                                "state_code",
                                                 "total_price"
                                             ],
                                             "properties": {
@@ -516,6 +443,7 @@
                                                     "examples": [
                                                         [
                                                             {
+                                                                "is_applicable": true,
                                                                 "channel_code": null,
                                                                 "discount_end_date": null,
                                                                 "discount_start_date": null,
@@ -545,6 +473,7 @@
                                                                 "default": {},
                                                                 "examples": [
                                                                     {
+                                                                        "is_applicable": true,
                                                                         "channel_code": null,
                                                                         "discount_end_date": null,
                                                                         "discount_start_date": null,
@@ -562,13 +491,27 @@
                                                                     }
                                                                 ],
                                                                 "required": [
+                                                                    "is_applicable",
+                                                                    "channel_code",
                                                                     "price",
+                                                                    "unit_discount_price",
+                                                                    "unit_origin_price",
                                                                     "volume_prices"
                                                                 ],
                                                                 "properties": {
+                                                                    "is_applicable": {
+                                                                        "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/all_prices/items/anyOf/0/properties/is_applicable",
+                                                                        "type": "boolean",
+                                                                        "title": "The is_applicable schema",
+                                                                        "description": "An explanation about the purpose of this instance.",
+                                                                        "default": false,
+                                                                        "examples": [
+                                                                            true
+                                                                        ]
+                                                                    },
                                                                     "channel_code": {
                                                                         "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/all_prices/items/anyOf/0/properties/channel_code",
-                                                                        "type": "string",
+                                                                        "type": "string
                                                                         "title": "The channel_code schema",
                                                                         "description": "An explanation about the purpose of this instance.",
                                                                         "default": null,
@@ -728,185 +671,6 @@
                                                     "examples": [
                                                         false
                                                     ]
-                                                },
-                                                "applicable_pricing": {
-                                                    "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/applicable_pricing",
-                                                    "type": "object",
-                                                    "title": "The applicable_pricing schema",
-                                                    "description": "An explanation about the purpose of this instance.",
-                                                    "default": {},
-                                                    "examples": [
-                                                        {
-                                                            "channel_code": null,
-                                                            "discount_end_date": null,
-                                                            "discount_start_date": null,
-                                                            "price": 500.0,
-                                                            "unit_discount_price": null,
-                                                            "unit_origin_price": 500.0,
-                                                            "volume_prices": [
-                                                                {
-                                                                    "price": 500.0,
-                                                                    "quantity_threshold": 1,
-                                                                    "unit_discount_price": null,
-                                                                    "unit_origin_price": 500.0
-                                                                }
-                                                            ]
-                                                        }
-                                                    ],
-                                                    "required": [
-                                                        "price",
-                                                        "volume_prices"
-                                                    ],
-                                                    "properties": {
-                                                        "channel_code": {
-                                                            "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/applicable_pricing/properties/channel_code",
-                                                            "type": "string",
-                                                            "title": "The channel_code schema",
-                                                            "description": "An explanation about the purpose of this instance.",
-                                                            "default": null,
-                                                            "examples": [
-                                                                null
-                                                            ]
-                                                        },
-                                                        "discount_end_date": {
-                                                            "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/applicable_pricing/properties/discount_end_date",
-                                                            "type": "date-time",
-                                                            "title": "The discount_end_date schema",
-                                                            "description": "An explanation about the purpose of this instance.",
-                                                            "default": null,
-                                                            "examples": [
-                                                                null
-                                                            ]
-                                                        },
-                                                        "discount_start_date": {
-                                                            "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/applicable_pricing/properties/discount_start_date",
-                                                            "type": "date-time",
-                                                            "title": "The discount_start_date schema",
-                                                            "description": "An explanation about the purpose of this instance.",
-                                                            "default": null,
-                                                            "examples": [
-                                                                null
-                                                            ]
-                                                        },
-                                                        "price": {
-                                                            "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/applicable_pricing/properties/price",
-                                                            "type": "number",
-                                                            "title": "The price schema",
-                                                            "description": "An explanation about the purpose of this instance.",
-                                                            "default": 0.0,
-                                                            "examples": [
-                                                                500.0
-                                                            ]
-                                                        },
-                                                        "unit_discount_price": {
-                                                            "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/applicable_pricing/properties/unit_discount_price",
-                                                            "type": "number",
-                                                            "title": "The unit_discount_price schema",
-                                                            "description": "An explanation about the purpose of this instance.",
-                                                            "default": null,
-                                                            "examples": [
-                                                                null
-                                                            ]
-                                                        },
-                                                        "unit_origin_price": {
-                                                            "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/applicable_pricing/properties/unit_origin_price",
-                                                            "type": "number",
-                                                            "title": "The unit_origin_price schema",
-                                                            "description": "An explanation about the purpose of this instance.",
-                                                            "default": 0.0,
-                                                            "examples": [
-                                                                500.0
-                                                            ]
-                                                        },
-                                                        "volume_prices": {
-                                                            "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/applicable_pricing/properties/volume_prices",
-                                                            "type": "array",
-                                                            "title": "The volume_prices schema",
-                                                            "description": "An explanation about the purpose of this instance.",
-                                                            "default": [],
-                                                            "examples": [
-                                                                [
-                                                                    {
-                                                                        "price": 500.0,
-                                                                        "quantity_threshold": 1,
-                                                                        "unit_discount_price": null,
-                                                                        "unit_origin_price": 500.0
-                                                                    }
-                                                                ]
-                                                            ],
-                                                            "additionalItems": true,
-                                                            "items": {
-                                                                "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/applicable_pricing/properties/volume_prices/items",
-                                                                "anyOf": [
-                                                                    {
-                                                                        "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/applicable_pricing/properties/volume_prices/items/anyOf/0",
-                                                                        "type": "object",
-                                                                        "title": "The first anyOf schema",
-                                                                        "description": "An explanation about the purpose of this instance.",
-                                                                        "default": {},
-                                                                        "examples": [
-                                                                            {
-                                                                                "price": 500.0,
-                                                                                "quantity_threshold": 1,
-                                                                                "unit_discount_price": null,
-                                                                                "unit_origin_price": 500.0
-                                                                            }
-                                                                        ],
-                                                                        "required": [
-                                                                            "price",
-                                                                            "quantity_threshold",
-                                                                            "unit_discount_price",
-                                                                            "unit_origin_price"
-                                                                        ],
-                                                                        "properties": {
-                                                                            "price": {
-                                                                                "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/applicable_pricing/properties/volume_prices/items/anyOf/0/properties/price",
-                                                                                "type": "number",
-                                                                                "title": "The price schema",
-                                                                                "description": "An explanation about the purpose of this instance.",
-                                                                                "default": 0.0,
-                                                                                "examples": [
-                                                                                    500.0
-                                                                                ]
-                                                                            },
-                                                                            "quantity_threshold": {
-                                                                                "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/applicable_pricing/properties/volume_prices/items/anyOf/0/properties/quantity_threshold",
-                                                                                "type": "integer",
-                                                                                "title": "The quantity_threshold schema",
-                                                                                "description": "An explanation about the purpose of this instance.",
-                                                                                "default": 0,
-                                                                                "examples": [
-                                                                                    1
-                                                                                ]
-                                                                            },
-                                                                            "unit_discount_price": {
-                                                                                "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/applicable_pricing/properties/volume_prices/items/anyOf/0/properties/unit_discount_price",
-                                                                                "type": "number",
-                                                                                "title": "The unit_discount_price schema",
-                                                                                "description": "An explanation about the purpose of this instance.",
-                                                                                "default": 0.0,
-                                                                                "examples": [
-                                                                                    null
-                                                                                ]
-                                                                            },
-                                                                            "unit_origin_price": {
-                                                                                "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/applicable_pricing/properties/volume_prices/items/anyOf/0/properties/unit_origin_price",
-                                                                                "type": "number",
-                                                                                "title": "The unit_origin_price schema",
-                                                                                "description": "An explanation about the purpose of this instance.",
-                                                                                "default": 0.0,
-                                                                                "examples": [
-                                                                                    500.0
-                                                                                ]
-                                                                            }
-                                                                        },
-                                                                        "additionalProperties": true
-                                                                    }
-                                                                ]
-                                                            }
-                                                        }
-                                                    },
-                                                    "additionalProperties": true
                                                 },
                                                 "channels": {
                                                     "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/channels",
@@ -1080,7 +844,7 @@
                                                 },
                                                 "min_quantity_alert": {
                                                     "$id": "#/properties/products/items/anyOf/0/properties/offers/items/anyOf/0/properties/min_quantity_alert",
-                                                    "type": "integer",
+                                                    "type": "number",
                                                     "title": "The min_quantity_alert schema",
                                                     "description": "An explanation about the purpose of this instance.",
                                                     "default": null,
